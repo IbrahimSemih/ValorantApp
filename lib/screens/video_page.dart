@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:chewie/chewie.dart';
-import 'package:video_player/video_player.dart';
+import 'package:valorant_app/services/services.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:valorant_app/constants/color.dart';
 import 'package:valorant_app/models/map_item.dart';
 
@@ -10,63 +10,96 @@ class VideoPage extends StatefulWidget {
   final MapItem map;
   final String region;
 
-  const VideoPage(
-      {super.key,
-      required this.agent,
-      required this.map,
-      required this.region});
+  const VideoPage({
+    super.key,
+    required this.agent,
+    required this.map,
+    required this.region,
+  });
 
   @override
   _VideoPageState createState() => _VideoPageState();
 }
 
 class _VideoPageState extends State<VideoPage> {
-  late VideoPlayerController _videoPlayerController;
-  late ChewieController _chewieController;
+  late Map<String, dynamic> videoData;
+  String videoUrl = ''; // Başlangıçta boş string
+  YoutubePlayerController? _youtubePlayerController; // Nullable olarak başlat
   String videoType =
       'attack'; // Varsayılan olarak 'attack' videosu gösterilecek
+  bool isVideoDataLoaded =
+      false; // Video verisinin yüklenip yüklenmediğini kontrol eder
+  bool isVideoReady =
+      false; // Videonun tıklanabilir olup olmadığını kontrol eder
+  bool isVideoPlaying =
+      false; // Videonun oynatılıp oynatılmadığını kontrol eder
 
   @override
   void initState() {
     super.initState();
-    _loadVideo();
+    _loadVideoData();
+  }
+
+  Future<void> _loadVideoData() async {
+    try {
+      videoData = await VideoService.loadVideoData();
+      setState(() {
+        isVideoDataLoaded = true; // Video verisinin yüklendiğini belirtir
+      });
+      _loadVideo();
+    } catch (e) {
+      print("Error loading video data: $e");
+    }
   }
 
   void _loadVideo() {
-    String videoPath =
-        getVideoPath(widget.agent, widget.map, widget.region, videoType);
-    _videoPlayerController = VideoPlayerController.asset(videoPath);
-    _chewieController = ChewieController(
-      videoPlayerController: _videoPlayerController,
-      autoPlay: true,
-      looping: true,
-      fullScreenByDefault: true,
-      // Diğer Chewie seçeneklerini buraya ekleyebilirsiniz
-    );
+    if (!isVideoDataLoaded)
+      return; // Video verisi yüklenmediyse fonksiyondan çık
 
-    _videoPlayerController.initialize().then((_) {
-      setState(() {});
-    }).catchError((error) {
-      print("Error initializing video player: $error");
-    });
-  }
+    String agentName = widget.agent["name"]?.toLowerCase() ?? "default_agent";
+    String mapName = widget.map.name.toLowerCase();
+    String regionName = widget.region.toLowerCase();
+    videoUrl = VideoService.getVideoUrl(
+        videoData, agentName, mapName, regionName, videoType);
 
-  String getVideoPath(
-      Map<String, String> agent, MapItem map, String region, String type) {
-    String agentName =
-        agent["name"]?.toLowerCase().replaceAll(" ", "_") ?? "default_agent";
-    String mapName = map.name.toLowerCase().replaceAll(" ", "_");
-    String regionName = region.toLowerCase().replaceAll(" ", "_");
-    String path =
-        'lib/assets/videos/${agentName}_${mapName}_${regionName}_$type.mp4';
-    return path;
+    // Extract the video ID from the URL
+    String videoId = YoutubePlayer.convertUrlToId(videoUrl) ?? '';
+
+    // Initialize the YoutubePlayerController only if videoId is not empty
+    if (videoId.isNotEmpty) {
+      if (_youtubePlayerController != null) {
+        _youtubePlayerController!.dispose(); // Dispose old controller
+      }
+      _youtubePlayerController = YoutubePlayerController(
+        initialVideoId: videoId,
+        flags: const YoutubePlayerFlags(
+          autoPlay: false, // Otomatik oynatmayı kapat
+          loop: true,
+          hideControls: false,
+          showLiveFullscreenButton: true,
+        ),
+      );
+      setState(() {
+        isVideoReady = true; // Video hazır
+      });
+    } else {
+      print("Error: Video ID is empty");
+    }
   }
 
   @override
   void dispose() {
-    _chewieController.dispose();
-    _videoPlayerController.dispose();
+    _youtubePlayerController?.dispose();
     super.dispose();
+  }
+
+  void _playVideo() {
+    if (_youtubePlayerController != null) {
+      setState(() {
+        isVideoPlaying = true;
+      });
+      _youtubePlayerController!.play();
+    }
   }
 
   @override
@@ -84,20 +117,47 @@ class _VideoPageState extends State<VideoPage> {
         centerTitle: true,
         toolbarHeight: height / 11,
         leading: IconButton(
-            color: Colors.white,
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: const Icon(Icons.arrow_back)),
+          color: Colors.white,
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
       ),
       body: Column(
         children: [
           SizedBox(
             height: 300,
             child: Center(
-              child: _chewieController.videoPlayerController.value.isInitialized
-                  ? Chewie(
-                      controller: _chewieController,
+              child: isVideoReady
+                  ? Stack(
+                      children: [
+                        YoutubePlayer(
+                          controller: _youtubePlayerController!,
+                          showVideoProgressIndicator: true,
+                          progressIndicatorColor: Colors.blueAccent,
+                          progressColors: const ProgressBarColors(
+                            playedColor: Colors.blueAccent,
+                            handleColor: Colors.blueAccent,
+                          ),
+                        ),
+                        if (!isVideoPlaying)
+                          Positioned.fill(
+                            child: Container(
+                              color: Colors.black54,
+                              child: Center(
+                                child: ElevatedButton(
+                                  onPressed: _playVideo,
+                                  child: const Icon(
+                                    Icons.play_arrow,
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                      ],
                     )
                   : const CircularProgressIndicator(),
             ),
@@ -110,6 +170,8 @@ class _VideoPageState extends State<VideoPage> {
                 onPressed: () {
                   setState(() {
                     videoType = 'attack';
+                    isVideoPlaying =
+                        false; // Videoyu yeniden yüklemeden önce durdur
                     _loadVideo(); // Videoyu yeniden yükle
                   });
                 },
@@ -124,6 +186,8 @@ class _VideoPageState extends State<VideoPage> {
                 onPressed: () {
                   setState(() {
                     videoType = 'defence';
+                    isVideoPlaying =
+                        false; // Videoyu yeniden yüklemeden önce durdur
                     _loadVideo(); // Videoyu yeniden yükle
                   });
                 },

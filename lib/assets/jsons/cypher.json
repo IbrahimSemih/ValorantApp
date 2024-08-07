@@ -1,0 +1,945 @@
+{
+    "videos": [
+      {
+        "agent": "Cypher",
+        "maps": [
+          {
+            "map": "ASCENT",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "A Heaven",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "A Generator",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=PAddSXCK7Ts"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=iQ1w2aBBjWU"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=UaS0aGrF4Q0"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=CzMtK20gjeY"
+                ]
+              },
+              {
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=ME4NlClkUpA"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "Mid Pizza",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "Market",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "Short",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              },
+              {
+                "region": "Mid Link",
+                "attack": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=a5RjRhPOeFI"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "SPLIT",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "A Ramps",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Mid Vent",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Link",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "SUNSET",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "A Link",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Market",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Top Mid",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Bottom Mid",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "LOTUS",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "C Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "C Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "HAVEN",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A Long",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "B BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Garage",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "C Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "C Long",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "C Link",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "BIND",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Short",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "A Lamps",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Shower",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Garden",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }, {
+                "region": "Hookah",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "BREEZE",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Yellow",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },{
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Wall",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Mid Nest",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "ABYSS",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Heaven",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Nest",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Mid",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }
+            ]
+          },
+          {
+            "map": "ICEBOX",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Rafters",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Top Mid",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "Bottom Mid",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Yellow",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Tower",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }          
+            ]
+          },
+          {
+            "map": "FRACTURE",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Sand",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Dish",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Arcade",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Tower",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Tree",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }         
+            ]
+          },
+          {
+            "map": "FRACTURE",
+            "regions": [
+              {
+                "region": "A Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example1"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example2"
+                ]
+              },
+              {
+                "region": "A Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Dugout",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "A Flowers",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Site Default Plant",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Main",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B BackSite",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Tower",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Screen",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              },
+              {
+                "region": "B Link",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              } ,
+              {
+                "region": "Mid Doors",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              } ,
+              {
+                "region": "Mid Art",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              } ,
+              {
+                "region": "Top Mid",
+                "attack": [
+                  "https://www.youtube.com/watch?v=example3"
+                ],
+                "defence": [
+                  "https://www.youtube.com/watch?v=example4"
+                ]
+              }          
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
