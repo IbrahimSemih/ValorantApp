@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "154262156893",
+    "firebase_url": "https://valorantapp-af847-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "valorantapp-af847",
+    "storage_bucket": "valorantapp-af847.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154262156893:android:3e3e7f24329914ea883fb4",
+        "android_client_info": {
+          "package_name": "com.example.valorant_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOnX92fG8honOi0KpB54c8NdnLcqqUNWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

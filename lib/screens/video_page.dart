@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:valorant_app/services/services.dart';
+import 'package:valorant_app/services/video_service.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:valorant_app/constants/color.dart';
 import 'package:valorant_app/models/map_item.dart';
@@ -23,16 +23,12 @@ class VideoPage extends StatefulWidget {
 
 class _VideoPageState extends State<VideoPage> {
   late Map<String, dynamic> videoData;
-  String videoUrl = ''; // Başlangıçta boş string
-  YoutubePlayerController? _youtubePlayerController; // Nullable olarak başlat
-  String videoType =
-      'attack'; // Varsayılan olarak 'attack' videosu gösterilecek
-  bool isVideoDataLoaded =
-      false; // Video verisinin yüklenip yüklenmediğini kontrol eder
-  bool isVideoReady =
-      false; // Videonun tıklanabilir olup olmadığını kontrol eder
-  bool isVideoPlaying =
-      false; // Videonun oynatılıp oynatılmadığını kontrol eder
+  String videoUrl = '';
+  YoutubePlayerController? _youtubePlayerController;
+  String videoType = 'attack'; // Varsayılan video türü
+  bool isVideoDataLoaded = false;
+  bool isVideoReady = false;
+  bool isVideoPlaying = false;
 
   @override
   void initState() {
@@ -43,44 +39,44 @@ class _VideoPageState extends State<VideoPage> {
   Future<void> _loadVideoData() async {
     try {
       videoData = await VideoService.loadVideoData();
+      print('Video data loaded successfully: $videoData'); // Hata ayıklama
       setState(() {
-        isVideoDataLoaded = true; // Video verisinin yüklendiğini belirtir
+        isVideoDataLoaded = true;
       });
-      _loadVideo();
+      _loadVideo(); // Video verileri yüklendikten sonra videoyu yükle
     } catch (e) {
       print("Error loading video data: $e");
+      // Kullanıcıya hata mesajı göstermek için bir yöntem ekleyin
     }
   }
 
   void _loadVideo() {
-    if (!isVideoDataLoaded)
-      return; // Video verisi yüklenmediyse fonksiyondan çık
+    if (!isVideoDataLoaded) return;
 
     String agentName = widget.agent["name"]?.toLowerCase() ?? "default_agent";
-    String mapName = widget.map.name.toLowerCase();
-    String regionName = widget.region.toLowerCase();
     videoUrl = VideoService.getVideoUrl(
-        videoData, agentName, mapName, regionName, videoType);
+        videoData, agentName, widget.map.name, widget.region, videoType);
 
-    // Extract the video ID from the URL
+    // Video URL'sinin geçerli olup olmadığını kontrol et
+    if (videoUrl.isEmpty || YoutubePlayer.convertUrlToId(videoUrl) == null) {
+      videoUrl = 'https://www.youtube.com/watch?v=7zsVIVufpbM'; // Test URL'si
+    }
+
     String videoId = YoutubePlayer.convertUrlToId(videoUrl) ?? '';
 
-    // Initialize the YoutubePlayerController only if videoId is not empty
     if (videoId.isNotEmpty) {
-      if (_youtubePlayerController != null) {
-        _youtubePlayerController!.dispose(); // Dispose old controller
-      }
+      _youtubePlayerController?.dispose();
       _youtubePlayerController = YoutubePlayerController(
         initialVideoId: videoId,
         flags: const YoutubePlayerFlags(
-          autoPlay: false, // Otomatik oynatmayı kapat
+          autoPlay: false,
           loop: true,
           hideControls: false,
           showLiveFullscreenButton: true,
         ),
       );
       setState(() {
-        isVideoReady = true; // Video hazır
+        isVideoReady = true;
       });
     } else {
       print("Error: Video ID is empty");
@@ -170,9 +166,8 @@ class _VideoPageState extends State<VideoPage> {
                 onPressed: () {
                   setState(() {
                     videoType = 'attack';
-                    isVideoPlaying =
-                        false; // Videoyu yeniden yüklemeden önce durdur
-                    _loadVideo(); // Videoyu yeniden yükle
+                    isVideoPlaying = false;
+                    _loadVideo(); // Attack videosunu yükle
                   });
                 },
                 child: const Text(
@@ -186,9 +181,8 @@ class _VideoPageState extends State<VideoPage> {
                 onPressed: () {
                   setState(() {
                     videoType = 'defence';
-                    isVideoPlaying =
-                        false; // Videoyu yeniden yüklemeden önce durdur
-                    _loadVideo(); // Videoyu yeniden yükle
+                    isVideoPlaying = false;
+                    _loadVideo(); // Defence videosunu yükle
                   });
                 },
                 child: const Text('Defence',
